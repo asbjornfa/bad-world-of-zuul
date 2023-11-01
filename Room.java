@@ -19,6 +19,8 @@ public class Room
     public Room southExit;
     public Room eastExit;
     public Room westExit;
+    public Room upExit;
+    public Room downExit;
 
     /**
      * Create a room described "description". Initially, it has
@@ -28,6 +30,7 @@ public class Room
      */
     public Room(String description) 
     {
+
         this.description = description;
     }
 
@@ -39,7 +42,7 @@ public class Room
      * @param south The south exit.
      * @param west The west exit.
      */
-    public void setExits(Room north, Room east, Room south, Room west) 
+    public void setExits(Room north, Room east, Room south, Room west, Room up, Room down)
     {
         if(north != null)
             northExit = north;
@@ -49,6 +52,10 @@ public class Room
             southExit = south;
         if(west != null)
             westExit = west;
+        if(up != null)
+            upExit = up;
+        if(down != null)
+            downExit = down;
     }
 
     /**
